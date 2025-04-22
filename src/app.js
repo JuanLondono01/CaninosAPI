@@ -50,5 +50,5 @@ app.use('/products',routeProduct)
 
 // Ejecución del servidor
 app.listen(port, () => {
-  console.log(`listening on http://localhost:${port}`)
+  console.log(`listening on port: ${port}`)
 })
