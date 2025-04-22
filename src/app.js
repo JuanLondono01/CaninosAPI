@@ -5,11 +5,11 @@ const app = express()
 const sequalize = require('./config/db')
 const cookieParser = require('cookie-parser')
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: '*',
   credentials: true
 }))
 
@@ -46,6 +46,10 @@ app.use('/categories', routeCategory);
 // Products
 const routeProduct = require('./routers/products.routers');
 app.use('/products',routeProduct)
+
+app.get('/', (req, res)=>{
+  res.send("APi funciona")
+})
 
 // Ejecución del servidor
 app.listen(port, () => {
