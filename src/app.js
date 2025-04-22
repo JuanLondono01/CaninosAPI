@@ -47,9 +47,6 @@ app.use('/categories', routeCategory);
 const routeProduct = require('./routers/products.routers');
 app.use('/products',routeProduct)
 
-app.get('/', (req, res)=>{
-  res.send("APi funciona")
-})
 
 // Ejecución del servidor
 app.listen(port, () => {
