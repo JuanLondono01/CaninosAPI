@@ -8,9 +8,8 @@ const cookieParser = require('cookie-parser')
 const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser())
-let allowedOrigins = ["https://caninos-sabs.up.railway.app/", "http://localhost:5173"]
 app.use(cors({
-  origin: allowedOrigins,
+  origin: "https://caninos-sabs.up.railway.app/",
   credentials: true
 }))
 
