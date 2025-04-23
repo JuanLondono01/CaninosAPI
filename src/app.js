@@ -8,10 +8,7 @@ const cookieParser = require('cookie-parser')
 const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser())
-app.use(cors({
-  origin: 'https://caninos-sabs.up.railway.app',
-  credentials: true
-}))
+app.use(cors())
 
 // Modelos del proyecto
 const Product = require('./models/products.models')
